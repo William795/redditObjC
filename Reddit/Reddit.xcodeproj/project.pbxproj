@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9217CA8B2295B0FD008B3235 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CA8A2295B0FD008B3235 /* AppDelegate.m */; };
-		9217CA8E2295B0FD008B3235 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CA8D2295B0FD008B3235 /* ViewController.m */; };
 		9217CA912295B0FD008B3235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217CA8F2295B0FD008B3235 /* Main.storyboard */; };
 		9217CA932295B0FF008B3235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9217CA922295B0FF008B3235 /* Assets.xcassets */; };
 		9217CA962295B0FF008B3235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217CA942295B0FF008B3235 /* LaunchScreen.storyboard */; };
 		9217CA992295B0FF008B3235 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CA982295B0FF008B3235 /* main.m */; };
 		9217CAA32295B0FF008B3235 /* RedditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CAA22295B0FF008B3235 /* RedditTests.m */; };
 		9217CAAE2295B0FF008B3235 /* RedditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CAAD2295B0FF008B3235 /* RedditUITests.m */; };
+		9217CABF2295B5D8008B3235 /* WILRedditPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CABE2295B5D8008B3235 /* WILRedditPost.m */; };
+		9217CAC32295B5F1008B3235 /* WILRedditPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217CAC22295B5F1008B3235 /* WILRedditPostController.m */; };
+		9217CAC72295C48F008B3235 /* RedditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217CAC62295C48F008B3235 /* RedditPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		9217CA862295B0FD008B3235 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9217CA892295B0FD008B3235 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9217CA8A2295B0FD008B3235 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9217CA8C2295B0FD008B3235 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9217CA8D2295B0FD008B3235 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9217CA902295B0FD008B3235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9217CA922295B0FF008B3235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9217CA952295B0FF008B3235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		9217CAA92295B0FF008B3235 /* RedditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9217CAAD2295B0FF008B3235 /* RedditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedditUITests.m; sourceTree = "<group>"; };
 		9217CAAF2295B0FF008B3235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9217CABD2295B5D8008B3235 /* WILRedditPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WILRedditPost.h; sourceTree = "<group>"; };
+		9217CABE2295B5D8008B3235 /* WILRedditPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WILRedditPost.m; sourceTree = "<group>"; };
+		9217CAC12295B5F1008B3235 /* WILRedditPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WILRedditPostController.h; sourceTree = "<group>"; };
+		9217CAC22295B5F1008B3235 /* WILRedditPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WILRedditPostController.m; sourceTree = "<group>"; };
+		9217CAC52295C48F008B3235 /* Reddit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reddit-Bridging-Header.h"; sourceTree = "<group>"; };
+		9217CAC62295C48F008B3235 /* RedditPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +107,12 @@
 		9217CA882295B0FD008B3235 /* Reddit */ = {
 			isa = PBXGroup;
 			children = (
-				9217CA892295B0FD008B3235 /* AppDelegate.h */,
-				9217CA8A2295B0FD008B3235 /* AppDelegate.m */,
-				9217CA8C2295B0FD008B3235 /* ViewController.h */,
-				9217CA8D2295B0FD008B3235 /* ViewController.m */,
+				9217CABB2295B166008B3235 /* Recources */,
 				9217CA8F2295B0FD008B3235 /* Main.storyboard */,
-				9217CA922295B0FF008B3235 /* Assets.xcassets */,
-				9217CA942295B0FF008B3235 /* LaunchScreen.storyboard */,
-				9217CA972295B0FF008B3235 /* Info.plist */,
-				9217CA982295B0FF008B3235 /* main.m */,
+				9217CAC02295B5DE008B3235 /* Models */,
+				9217CAC42295B5F7008B3235 /* Controllers */,
+				9217CAC62295C48F008B3235 /* RedditPostViewController.swift */,
+				9217CAC52295C48F008B3235 /* Reddit-Bridging-Header.h */,
 			);
 			path = Reddit;
 			sourceTree = "<group>";
@@ -130,6 +133,37 @@
 				9217CAAF2295B0FF008B3235 /* Info.plist */,
 			);
 			path = RedditUITests;
+			sourceTree = "<group>";
+		};
+		9217CABB2295B166008B3235 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				9217CA892295B0FD008B3235 /* AppDelegate.h */,
+				9217CA8A2295B0FD008B3235 /* AppDelegate.m */,
+				9217CA922295B0FF008B3235 /* Assets.xcassets */,
+				9217CA942295B0FF008B3235 /* LaunchScreen.storyboard */,
+				9217CA972295B0FF008B3235 /* Info.plist */,
+				9217CA982295B0FF008B3235 /* main.m */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		9217CAC02295B5DE008B3235 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9217CABD2295B5D8008B3235 /* WILRedditPost.h */,
+				9217CABE2295B5D8008B3235 /* WILRedditPost.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9217CAC42295B5F7008B3235 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9217CAC12295B5F1008B3235 /* WILRedditPostController.h */,
+				9217CAC22295B5F1008B3235 /* WILRedditPostController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +233,7 @@
 				TargetAttributes = {
 					9217CA852295B0FD008B3235 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					9217CA9D2295B0FF008B3235 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -262,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9217CA8E2295B0FD008B3235 /* ViewController.m in Sources */,
+				9217CAC72295C48F008B3235 /* RedditPostViewController.swift in Sources */,
 				9217CA992295B0FF008B3235 /* main.m in Sources */,
 				9217CA8B2295B0FD008B3235 /* AppDelegate.m in Sources */,
+				9217CAC32295B5F1008B3235 /* WILRedditPostController.m in Sources */,
+				9217CABF2295B5D8008B3235 /* WILRedditPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,14 +472,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Reddit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Reddit/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.Reddit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reddit/Reddit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -451,14 +492,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Reddit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Reddit/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.Reddit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reddit/Reddit-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -466,6 +510,7 @@
 		9217CAB62295B0FF008B3235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RedditTests/Info.plist;
@@ -484,6 +529,7 @@
 		9217CAB72295B0FF008B3235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RedditTests/Info.plist;
@@ -502,6 +548,7 @@
 		9217CAB92295B0FF008B3235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RedditUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +566,7 @@
 		9217CABA2295B0FF008B3235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RedditUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
